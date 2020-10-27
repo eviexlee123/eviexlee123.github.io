@@ -1,0 +1,115 @@
+:root {
+	--sage:								#87A376;
+	--sakura:							#FFE4E4;
+	--slate:							#333f54;
+	--white:							#FFFFFF;
+
+	--trans: transparent;
+}
+
+hr {
+	background-color: black;
+	border: none;
+	height: 1px;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
+  text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	text-align: center;
+	color: #FFE4E4;
+	font-size: 17px;
+	padding: 14px 16px;
+}
+
+li a:hover {
+	background-color: #111;
+	color: #FFE4E4;
+}
+
+a:link.what{
+	color:black;
+}
+a:visited.what {
+	color:black;
+}
+a:active.what {
+	color: white;
+}
+
+div.box {
+	border: 5px solid black;
+	width: 75%;
+	padding: 20px;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+* { margin: 0; padding: 0; font-size: 15px;}
+
+div.diamonds {  display: inline-block;
+	margin: 0.1em; border-radius: 0; font-size: 4em; position: relative; transform-style: preserve-3d; width:100% }
+div::before,
+div::after {
+	border-radius: 0;
+	content: '';
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%; }
+.current { border-radius: 0; font-size: 5.5em; height: 5em; width: 100; }
+.current::before,
+.current::after { border-radius: 0; }
+
+
+
+.diamonds {
+	background: var(--sakura);
+	background-image:
+		repeating-linear-gradient(
+			60deg,
+			var(--slate),
+			var(--slate) 0.6em,
+			var(--trans) 0.61em,
+			var(--trans) 0.9em,
+			var(--slate) 0.91em),
+		repeating-linear-gradient(
+			-60deg,
+			var(--slate),
+			var(--slate) 0.6em,
+			var(--trans) 0.61em,
+			var(--trans) 0.9em,
+			var(--slate) 0.91em),
+		repeating-linear-gradient(
+			90deg,
+			var(--white),
+			var(--white) 0.3em,
+			var(--trans) 0.31em,
+			var(--trans) 0.52em,
+			var(--white) 0.525em);
+	background-position: 0.48em 0;
+	background-size: 21em;
+}
