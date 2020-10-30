@@ -3,11 +3,19 @@
 <head>
   <title>Evelyn Lee</title>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+  <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+  <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+  <meta charset=utf-8 />
+  <style>
+    article, aside, figure, footer, header, hgroup,
+    menu, nav, section { display: block; }
+  </style>
 </head>
 <body style="background-color:#a3b1c9;">
   <center>
-    <h1  style="font-size: 60px;"> EVELYN LEE </h1>
+    <h1  style="font-size: 60px;"> EVELYN LEE</h1>
     <ul style="background-color: #333f54;">
       <li><a href="index.html">Home</a></li>
       <li><a target="_blank" href="https://docs.google.com/document/d/154IcxcuaKmGl_ihyJojEN-pFoZqTG5M0qcMwYhzF86Y/edit?usp=sharing">Resume</a></li>
@@ -28,10 +36,48 @@
       <br>
       <p>But hey, just because <i>we</i> can't read it doesn't mean a computer can't.</p>
     </div>
-    <!-- <div style="float:right;width:62%;border:5px solid black;padding:1%;margin:.25%;"> -->
+    <div style="float:right;width:62%;border:5px solid black;padding:1%;margin:.25%;">
       <div>Try it out:</div>
+      <!--
+      function putImage()
+      {
+        var canvas1 = document.getElementById("canvasSignature");
+        if (canvas1.getContext) {
+           var ctx = canvas1.getContext("2d");
+           var myImage = canvas1.toDataURL("image/png");
+        }
+        var imageElement = document.getElementById("MyPix");
+        imageElement.src = myImage;
+
+      } -->
+      <!--
+      <div id="createPNGButton">
 
 
+      <input type='file' onchange="readURL(this);" />
+      <br>
+        <img id="imag" src="#" alt="your image" />
+        <br>
+        <br>
+        <button onclick="putImage()">Save as Image</button>
+      </div> -->
+
+      <script>
+        function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#imag')
+                            .attr('src', e.target.result)
+                            .width(150)
+                            .height(200);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+      </script>
       <button type="button" onclick="init()">Start</button>
       <div id="webcam-container"></div>
       <div id="label-container"></div>
@@ -42,7 +88,7 @@
           // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
           // the link to your model provided by Teachable Machine export panel
-          const URL = "https://teachablemachine.withgoogle.com/models/-YtDnJZm5/";
+          const URL = "https://teachablemachine.withgoogle.com/models/Pe37k0C4L/";
 
           let model, webcam, labelContainer, maxPredictions;
 
@@ -90,6 +136,7 @@
               }
           }
       </script>
+    </div>
 <div style="float:right;width:62%;border:5px solid black;padding:1%;margin:.25%;">
   <p> What is this?</p><br>
   <p>Upload a photo and the program will run and tell you what letter it thinks it is. As of right now, I have figured out how to let the computer read individual letters. If you decide to upload a word or a sentence, chances are this program isn't going to be that accurate.</p>
