@@ -37,107 +37,16 @@
       <br>
       <p>But hey, just because <i>we</i> can't read it doesn't mean a computer can't.</p>
     </div>
-    <div style="float:right;width:62%;border:5px solid black;padding:1%;margin:.25%;">
-      <div>Try it out:</div>
-      <!--
-      function putImage()
-      {
-        var canvas1 = document.getElementById("canvasSignature");
-        if (canvas1.getContext) {
-           var ctx = canvas1.getContext("2d");
-           var myImage = canvas1.toDataURL("image/png");
-        }
-        var imageElement = document.getElementById("MyPix");
-        imageElement.src = myImage;
-
-      } -->
-      <!--
-      <div id="createPNGButton">
-
-
-      <input type='file' onchange="readURL(this);" />
-      <br>
-        <img id="imag" src="#" alt="your image" />
-        <br>
-        <br>
-        <button onclick="putImage()">Save as Image</button>
-      </div> -->
-
-      <script>
-        function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        $('#imag')
-                            .attr('src', e.target.result)
-                            .width(150)
-                            .height(200);
-                    };
-
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-      </script>
-      <button type="button" onclick="init()">Start</button>
-      <div id="webcam-container"></div>
-      <div id="label-container"></div>
-      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+   <!--  <div style="float:right;width:62%;border:5px solid black;padding:1%;margin:.25%;"> -->
       <script type="text/javascript">
-          // More API functions here:
-          // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
-          // the link to your model provided by Teachable Machine export panel
-          const URL = "https://teachablemachine.withgoogle.com/models/Pe37k0C4L/";
+      function newPopup(url) {
+	       popupWindow = window.open(
+		         url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+      }
+    </script>
+    <p><a href="JavaScript:newPopup('machinelearning.html');">Try it out!</a></p>
 
-          let model, webcam, labelContainer, maxPredictions;
-
-          // Load the image model and setup the webcam
-          async function init() {
-              const modelURL = URL + "model.json";
-              const metadataURL = URL + "metadata.json";
-
-              // load the model and metadata
-              // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-              // or files from your local hard drive
-              // Note: the pose library adds "tmImage" object to your window (window.tmImage)
-              model = await tmImage.load(modelURL, metadataURL);
-              maxPredictions = model.getTotalClasses();
-
-              // Convenience function to setup a webcam
-              const flip = false; // whether to flip the webcam
-              webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
-              await webcam.setup(); // request access to the webcam
-              await webcam.play();
-              window.requestAnimationFrame(loop);
-
-              // append elements to the DOM
-              document.getElementById("webcam-container").appendChild(webcam.canvas);
-              labelContainer = document.getElementById("label-container");
-              for (let i = 0; i < maxPredictions; i++) { // and class labels
-                  labelContainer.appendChild(document.createElement("div"));
-              }
-          }
-
-          async function loop() {
-              webcam.update(); // update the webcam frame
-              await predict();
-              window.requestAnimationFrame(loop);
-          }
-
-          // run the webcam image through the image model
-          async function predict() {
-              // predict can take in an image, video or canvas html element
-              const prediction = await model.predict(webcam.canvas);
-              for (let i = 0; i < maxPredictions; i++) {
-                  const classPrediction =
-                      prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                  labelContainer.childNodes[i].innerHTML = classPrediction;
-              }
-          }
-      </script>
-    </div>
 <div style="float:right;width:62%;border:5px solid black;padding:1%;margin:.25%;">
   <p> What is this?</p><br>
   <p>Press the button and the program will run and tell you what letter it thinks it is. As of right now, I have figured out how to let the computer read individual letters. This program will not work if you do not have a webcam!</p>
