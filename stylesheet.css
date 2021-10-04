@@ -25,7 +25,7 @@ h1 {
 
 p {
   font-size: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 ul {
@@ -107,3 +107,172 @@ div::after {
 	background-position: 0.48em 0;
 	background-size: 21em;
 }
+
+
+.menu-container {
+	position: absolute;
+	width:5rem;
+	height: 5rem;
+	overflow: hidden;
+	left:0;
+	top: 0;
+	transition-delay: .3s;
+}
+
+.menu {
+	position: relative;
+	width: 10rem;
+	height: 10rem;
+	background-color: #1c7cd6;
+	border-radius: 100%;
+	transform: translate(-50%, -50%);
+	transition: all .3s;
+}
+
+#hamburger {
+	display: none;
+}
+
+label {
+	position: absolute;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	cursor: pointer;
+	tap-highlight-color:transparent;
+	
+	&:before {
+  content: "";
+  position: absolute;
+  top: 65%;
+		left: 65%;
+  width: 1em;
+  height: 0.15em;
+  background: white;
+  box-shadow: 
+    0 0.25em 0 0 white,
+    0 0.5em 0 0 white;
+		transform: scale(2);
+}
+}
+
+#hamburger:checked ~ .menu-container {
+	width: 30vw;
+	height: 100vh;
+	transition-delay: 0s;
+}
+
+#hamburger:checked ~ .menu-container .menu {
+	width: 250vh;
+	height: 250vh;
+	transition: all .3s;
+}
+
+.menu-container .links {
+	position: absolute;
+	left: 15vw;
+	top: 50vh;
+	z-index: 3;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	a {
+		display: block;
+		color: white;
+		font-size: 2rem;
+		text-decoration: none;
+		margin: 3rem;
+	}
+}
+
+.content {
+	padding: 3rem 10rem;
+	transition: all .2s;
+	transition-delay: .1s;
+	
+	h1 {
+		font-size: 2rem;
+		color: #212529;
+	}
+	
+	h1:not(.header) {
+		margin-top: 4rem;
+	}
+	
+	p {
+		margin-top: 2rem;
+		color: #495057;
+	}
+}
+
+#hamburger:checked ~ .content {
+	padding-left: 35vw;
+	transition: all .2s;
+	transition-delay: 0s;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
