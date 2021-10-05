@@ -11,12 +11,9 @@
     <center>
       <h1  style="font-size: 60px;"> EVELYN LEE </h1>
 
-
       <ul style="background-color: #333f54;">
         <li><a class="active" href="index.html">Home</a></li>
-        <li>
-          <a href="https://drive.google.com/file/d/1ZCPqSpEkif1gRpcJfFkFd7_asv5aMMFE/preview" width="640" height="480" allow="autoplay">Resume</a>
-     </li>
+        <li><a target="_blank" href="https://drive.google.com/file/d/1ZCPqSpEkif1gRpcJfFkFd7_asv5aMMFE/preview" width="640" height="480" allow="autoplay">Resume</a></li>
         <li><a href="projects.html">Projects</a></li>
       </ul>
 
@@ -32,6 +29,20 @@
         <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
       </div>
 
+      <script>
+        function openNav() 
+        {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+  
+        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+        function closeNav() 
+        {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
 
 
       <br>
@@ -45,13 +56,32 @@
       <h4 style="font-size:20px;">My website updates constantly. Be on the lookout for new projects!</p>
       <br><br>
      </center>
-     <div style="background-color:mintcream;">
-      <h3 style="font-size:40px;">About Me</h3>
-   <p style="font-size:20px;" > Hi there! My name is Evelyn but most people call me Evie. I'm currently a freshman at Duke University, Trinity College of Arts and Sciences.
+     <div style="background-color:#333f54;">
+      <h3 style="font-size:40px;color:white;padding:20px;padding-bottom:5px">About Me</h3>
+   <p style="font-size:20px;color:white;padding:20px;padding-top:5px;" > Hi there! My name is Evelyn but most people call me Evie. I'm currently a freshman at Duke University, Trinity College of Arts and Sciences.
         I intend on getting a Bachelor of Sciences degree in Computer Science, with an interest in Linguistics and Astrophysics.
         Here is where you'll be able to see any projects or updates I have about myself. 
         You can contact me via my email: lee.evie01@gmail.com</p> <br>
       </div>
-   
+    <br>
+    
+    <div style="display:grid;grid-template-columns: auto auto auto; grid-gap:20px;">
+      
+      <div style="background-color:#333f54;float:left;">
+       <h3 style="font-size:30px;color:white;padding:20px;padding-bottom:5px">Relevant Coursework</h3>
+       <p style="font-size:20px;color:white;padding:20px;padding-top:5px;" > CS201: Data Structures and Algorithms</p> 
+      </div>
+      
+      <div style="background-color:#333f54;float:right;">
+       <h3 style="font-size:30px;color:white;padding:20px;padding-bottom:5px">Programming Languages</h3>
+        <p style="font-size:20px;color:white;padding:20px;padding-top:5px;" >HTML<br>Python<br>Java<br>C#</u> 
+      </div>
+    
+      <div style="background-color:#333f54;float:right;">
+        <h3 style="font-size:30px;color:white;padding:20px;padding-bottom:5px">Extracurriculars</h3>
+         <p style="font-size:20px;color:white;padding:20px;padding-top:5px;" > Women in Tech</p>
+        </div> <br>
+    </div>
+    
   </body>
 </html>
