@@ -101,6 +101,11 @@
     color: #fff;
 }
 
+.links:hover {
+    color: #828da7;
+    transition: all 0.3s ease;
+}
+
 p {
     color: #fff;
 }
