@@ -1,90 +1,45 @@
-
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Evelyn Lee</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  </head>
-  <body style="background-color:white;">
-    <center>
-      <h1  style="font-size: 60px;"> EVELYN LEE </h1>
-
-      <ul style="background-color: #333f54;">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a target="_blank" href="https://drive.google.com/file/d/1ZCPqSpEkif1gRpcJfFkFd7_asv5aMMFE/preview" width="640" height="480" allow="autoplay">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
-<!--
-      <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-      </div>
-      
-      <div id="main">
-        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
-      </div>
-    -->
-
-      <script>
-        function openNav() 
-        {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-  
-        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-        function closeNav() 
-        {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginLeft = "0";
-        }
-      </script>
-
-
-      <br>
-      <!-- <div class="diamonds">
-        <h4><br></h4>
-        <img style="border-radius: 60%; width: 10%;" src="profile.jpg">
-      </div><hr> -->
-      <br><br>
-      <h4 style="font-size:50px;"> Hi there! Welcome to my website! </h4>
-      <br><br>
-      <h4 style="font-size:20px;">My website updates constantly. Be on the lookout for new projects!</p>
-      <br><br>
-     </center>
-     <div style="background-color:#333f54;">
-      <h3 style="font-size:40px;color:white;padding:20px;padding-bottom:5px">About Me</h3>
-   <p style="font-size:20px;color:white;padding:20px;padding-top:5px;" > Hi there! My name is Evelyn but most people call me Evie. I'm currently a freshman at Duke University, Trinity College of Arts and Sciences.
-        I intend on getting a Bachelor of Sciences degree in Computer Science, with an interest in Linguistics and Astrophysics.
-        Here is where you'll be able to see any projects or updates I have about myself. 
-        You can contact me via my email: lee.evie01@gmail.com</p> <br>
-      </div>
-    <br>
-    
-    <div style="display:grid;grid-template-columns: auto auto auto; grid-gap:20px;">
-      
-      <div style="background-color:#333f54;float:left;">
-       <h3 style="font-size:30px;color:white;padding:20px;padding-bottom:5px">Relevant Coursework</h3>
-       <p style="font-size:20px;color:white;padding:20px;padding-top:5px;" > College Courses: <br> CS201: Data Structures and Algorithms <br>
-        High School Courses: <br> Computational Science, Computer Science Seminar: Machine Learning,
-        Accelerated Computer Programming, Computer Science Inquiry, Methods in Scientific Research, Object-Oriented Programming</p> 
-      </div>
-      
-      <div style="background-color:#333f54;float:right;">
-       <h3 style="font-size:30px;color:white;padding:20px;padding-bottom:5px">Programming Languages</h3>
-        <p style="font-size:20px;color:white;padding:20px;padding-top:5px;" >Java (Intermediate) <br>C# (Intermediate)<br>Python (Intermediate) <br>HTML (Elementary)</u> 
-      </div>
-    
-      <div style="background-color:#333f54;float:right;">
-        <h3 style="font-size:30px;color:white;padding:20px;padding-bottom:5px">Hobbies</h3>
-         <p style="font-size:20px;color:white;padding:20px;padding-top:5px;">Drawing, painting, cooking, playing video games and napping :)</p>
-        </div> <br>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">Evelyn Lee</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links" id="homepage">Home</a>
+                </li>
+                <li class="navbar__btn">
+                    <a class="links" target="_blank" href="https://drive.google.com/file/d/1ZCPqSpEkif1gRpcJfFkFd7_asv5aMMFE/preview" width="640" height="480" allow="autoplay">Resume</a>
+                    
+                </li>
+                <li class="navbar__item">
+                    <a href="projects.html" class="navbar__links" id="projectspage">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="hero" id ="home">
+        <div class="hero__container">
+            <h1 class="hero__heading">Hi! Welcome to my website!</h1>
+            <p class="hero__description">My name is Evelyn Lee, but I also go by Evie. I'm a freshman at Duke University, Trinity College of Arts and Sciences. I intend on getting a Bachelor of Sciences in Computer Science. Here is where you can find any of my projects or work.</p>
+            <button class="main__btn"><a href="#">Contact Me</a></button>
+        </div>
     </div>
-    
-  </body>
+
+    <script src="app.js"></script>
+</body>
 </html>
+
