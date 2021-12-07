@@ -1,63 +1,85 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Evelyn Lee</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  </head>
-  <body style="background-color:white;">
-    <center>
-      <h1  style="font-size: 60px;"> EVELYN LEE </h1>
-      <ul style="background-color: #333f54;">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a target="_blank" href="https://drive.google.com/file/d/1ZCPqSpEkif1gRpcJfFkFd7_asv5aMMFE/preview" width="640" height="480" allow="autoplay">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
-      <br>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">Evelyn Lee</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links" id="homepage">Home</a>
+                </li>
+                <li class="navbar__btn">
+                    <a class="links" target="_blank" href="https://drive.google.com/file/d/1ZCPqSpEkif1gRpcJfFkFd7_asv5aMMFE/preview" width="640" height="480" allow="autoplay">Resume</a>
+                    
+                </li>
+                <li class="navbar__item">
+                    <a href="projects.html" class="navbar__links" id="projectspage">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
-      <p> Here is where you'll find the current and old projects I'm working on.</p>
+    <div class="hero" id ="projects">
+        <center>
+        <p> Here is where you'll find the current and old projects I'm working on.</p>
 
 
-      <p style = "font-size:50px;">•••</p>
-      <br>
-      <!--  <a style="font-size:30px;" target="_blank" href="https://docs.google.com/document/d/1yXSRSCd3Va7WezrfDUOI1sY9FyUe70yb1ut0jM3OX-Y/edit?usp=sharing">MY 2019-2020 STUDENT RESEARCH PAPER</a>
-      <a style="font-size:30px;" target="_blank" href="https://docs.google.com/document/d/1r8S0wmml6mHlD1Bqo4uEYEm_jOev7NtJA_S8nfvfAV4/edit?usp=sharing">MY 2020-2021 STUDENT RESEARCH PAPER</a>
-      -->
-     
-      <a style="font-size:30px;" target="_blank" href="https://docs.google.com/document/d/1yXSRSCd3Va7WezrfDUOI1sY9FyUe70yb1ut0jM3OX-Y/preview">MY 2019-2020 STUDENT RESEARCH PAPER</a>
-      <!-- <div class="box"> -->
-        <p>Read my 2020 research paper here on estimating the number of earth sized habitable planet within our galaxy.</p>
-      <!-- </div> -->
-      
+        <p style = "font-size:50px;">•••</p>
+        <br>
+       
+        <a class="links" style="font-size:30px;" target="_blank" href="https://docs.google.com/document/d/1yXSRSCd3Va7WezrfDUOI1sY9FyUe70yb1ut0jM3OX-Y/preview">MY 2019-2020 STUDENT RESEARCH PAPER</a>
+       
+          <p>Read my 2020 research paper here on estimating the number of earth sized habitable planet within our galaxy.</p>
+        
+        
+  
+        <br>
+        <p style = "font-size:50px;">•</p>
+        <br>
+  
+  
+        <a class="links" style="font-size:30px;" target="_blank" href="https://docs.google.com/document/d/1r8S0wmml6mHlD1Bqo4uEYEm_jOev7NtJA_S8nfvfAV4/preview">MY 2020-2021 STUDENT RESEARCH PAPER</a>
+        
+          <p>This is a continutation of the research topic from my previous paper, but with a new group and a different direction.</p>
+        
+  
+  
+        <br>
+        <p style = "font-size:50px;">•</p>
+        <br>
+  
+        <!--
+        <a class="links" style="font-size:30px;" href="RussianOCR.html">RUSSIAN CURSIVE OCR PROJECT</a>
+        
+          <p>Read into how I'm working on creating an Optical Character Recognition/Reader (OCR) specifically for cursive Russian, using machine learning.</p>
+        
+  
+  
+        <br>
+        <p style = "font-size:50px;">•</p>
+        <br>
+        -->
+        
+        </center>
 
-      <br>
-      <p style = "font-size:50px;">•</p>
-      <br>
 
+    </div> 
 
-      <a style="font-size:30px;" target="_blank" href="https://docs.google.com/document/d/1r8S0wmml6mHlD1Bqo4uEYEm_jOev7NtJA_S8nfvfAV4/preview">MY 2020-2021 STUDENT RESEARCH PAPER</a>
-      <!-- <div class="box"> -->
-        <p>This is a continutation of the research topic from my previous paper, but with a new group and a different direction.</p>
-      <!-- </div> -->
-
-
-      <br>
-      <p style = "font-size:50px;">•</p>
-      <br>
-
-
-      <a style="font-size:30px;" href="RussianOCR.html">RUSSIAN CURSIVE OCR PROJECT</a>
-      <!-- <div class="box"> -->
-        <p>Read into how I'm working on creating an Optical Character Recognition/Reader (OCR) specifically for cursive Russian, using machine learning.</p>
-      <!-- </div> -->
-
-
-      <br>
-      <p style = "font-size:50px;">•</p>
-      <br>
-
-
-    </center>
-  </body>
+    <script src="app.js"></script>
+</body>
 </html>
+
